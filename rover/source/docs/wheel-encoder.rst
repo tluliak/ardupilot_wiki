@@ -32,12 +32,17 @@ To enable position estimation using the wheel encoders the EKF3 must be set as t
 - set :ref:`EK3_ENABLE <EK3_ENABLE>` to 1 (enable EKF3)
 - set :ref:`EK3_GPS_TYPE <EK3_GPS_TYPE>` to 3 (No GPS)
 
+To enable wheel encoder messages over a radio link for ground testing, the link must be set to MAVlink2:
+
+- set :ref:`SERIALX_PROTOCOL <SERIALX_PROTOCOL>` to 2 (MAVLink2)
+    where X is the radio telemetry serial port on your autopilot. The USB port is configured to MAVlink2 by default.
+    
 After making the above changes the autopilot should be rebooted
 
 Ground Testing
 ==============
 
-If using Rover 4.0 (or later), the ``WHEEL_DISTANCE`` MAVLink message shows the total distance travelled by each wheel in real time.  Mission Planner's MAVLink Inspector can be used which can be opened by pressing Ctrl-F and then pushing the "MAVLink Inspector" button.
+If using Rover 4.0 (or later), the ``WHEEL_DISTANCE`` MAVLink message shows the total distance travelled by each wheel in real time.  Mission Planner's MAVLink Inspector can be used which can be opened by pressing Ctrl-F and then pushing the "MAVLink Inspector" button. 
 
 .. image:: ../images/Mavlink-Inspector.jpg
 
